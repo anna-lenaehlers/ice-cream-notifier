@@ -51,7 +51,7 @@ function getWeatherData(customCity){
             if(currTemp > 30 && !obtainedIceCream) {
                 dialog.style.display = 'block';
                 obtainedIceCream = true;
-            } else {
+            } else if (currTemp > 30 && obtainedIceCream) {
                 alreadyObtained.style.display = 'block';
                 setTimeout(() => alreadyObtained.style.display = '', 5000);
             }
