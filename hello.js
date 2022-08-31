@@ -48,10 +48,10 @@ function getWeatherData(customCity){
             const currTemp = Math.round(data.data[0].app_temp);
             temp.textContent = `${currTemp}°C`;
             city.textContent = customCity;
-            if(currTemp > 30 && !obtainedIceCream) {
+            if(currTemp >= 30 && !obtainedIceCream) {
                 dialog.style.display = 'block';
                 obtainedIceCream = true;
-            } else if (currTemp > 30 && obtainedIceCream) {
+            } else if (currTemp >= 30 && obtainedIceCream) {
                 alreadyObtained.style.display = 'block';
                 setTimeout(() => alreadyObtained.style.display = '', 5000);
             }
